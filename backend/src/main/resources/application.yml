@@ -18,7 +18,7 @@ spring:
 
   # ClickHouse DataSource (via JDBC)
   datasource:
-    url: ${CLICKHOUSE_URL:jdbc:clickhouse://clickhouse:8123/default}
+    url: ${CLICKHOUSE_URL:jdbc:clickhouse://clickhouse:8123/default?compress=0}
     driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
     username: ${CLICKHOUSE_USER:default}
     password: ${CLICKHOUSE_PASSWORD:}

@@ -3,26 +3,26 @@
 
 :root {
   /* Color palette */
-  --bg-base:        #0a0e1a;
-  --bg-surface:     #0f1629;
-  --bg-card:        #131d35;
-  --bg-hover:       #1a2540;
-  --border:         rgba(255,255,255,0.07);
-  --border-accent:  rgba(99,179,237,0.3);
+  --bg-base:        #f8fafc;
+  --bg-surface:     #ffffff;
+  --bg-card:        #ffffff;
+  --bg-hover:       #f1f5f9;
+  --border:         rgba(0,0,0,0.08);
+  --border-accent:  rgba(239,68,68,0.3);
 
   /* Accent colors */
-  --accent-blue:    #3b82f6;
-  --accent-cyan:    #06b6d4;
+  --accent-blue:    #dc2626;
+  --accent-cyan:    #b91c1c;
   --accent-green:   #10b981;
   --accent-yellow:  #f59e0b;
   --accent-red:     #ef4444;
-  --accent-purple:  #8b5cf6;
+  --accent-purple:  #991b1b;
   --accent-orange:  #f97316;
 
   /* Text */
-  --text-primary:   #f0f4ff;
-  --text-secondary: #8899bb;
-  --text-muted:     #4a5568;
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
 
   /* Status */
   --status-healthy:  #10b981;
@@ -31,11 +31,11 @@
   --status-overload: #dc2626;
 
   /* Gradients */
-  --grad-blue:   linear-gradient(135deg, #1d4ed8, #06b6d4);
+  --grad-blue:   linear-gradient(135deg, #ef4444, #dc2626);
   --grad-green:  linear-gradient(135deg, #059669, #10b981);
-  --grad-red:    linear-gradient(135deg, #dc2626, #f97316);
-  --grad-purple: linear-gradient(135deg, #7c3aed, #ec4899);
-  --grad-card:   linear-gradient(135deg, rgba(59,130,246,0.05), rgba(6,182,212,0.03));
+  --grad-red:    linear-gradient(135deg, #b91c1c, #991b1b);
+  --grad-purple: linear-gradient(135deg, #dc2626, #b91c1c);
+  --grad-card:   linear-gradient(135deg, rgba(239,68,68,0.03), rgba(220,38,38,0.01));
 }
 
 * {
@@ -63,7 +63,7 @@ body {
 /* ─── Topbar ─────────────────────────────────────────────────────────────── */
 .topbar {
   grid-column: 1 / -1;
-  background: rgba(15,22,41,0.95);
+  background: rgba(255,255,255,0.95);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(20px);
   display: flex;
@@ -450,7 +450,7 @@ body {
 
 .progress-bar {
   height: 4px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -581,8 +581,8 @@ body {
 /* ─── Scrollbar ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.25); }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {

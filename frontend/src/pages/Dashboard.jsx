@@ -32,10 +32,11 @@ function CustomTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
   return (
     <div style={{
-      background: '#131d35', border: '1px solid rgba(255,255,255,0.1)',
-      borderRadius: 8, padding: '10px 14px', fontSize: 12
+      background: '#ffffff', border: '1px solid rgba(0,0,0,0.1)',
+      borderRadius: 8, padding: '10px 14px', fontSize: 12,
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
     }}>
-      <div style={{ color: '#8899bb', marginBottom: 4 }}>{label}</div>
+      <div style={{ color: '#475569', marginBottom: 4 }}>{label}</div>
       {payload.map((p, i) => (
         <div key={i} style={{ color: p.color, fontWeight: 600 }}>
           {p.name}: {typeof p.value === 'number' ? p.value.toFixed(1) : p.value}

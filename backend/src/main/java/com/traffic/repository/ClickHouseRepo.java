@@ -95,18 +95,19 @@ public class ClickHouseRepo {
                 (event_id, session_id, ip_address, endpoint, method,
                  status_code, latency_ms, event_time, user_agent, region,
                  is_bypass, is_anomaly, bypass_type, retry_count)
-                VALUES (?, ?, ?, ?, ?, ?, ?, toDateTime(?), ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
                 event.getEventId(), event.getSessionId(), event.getIpAddress(),
                 event.getEndpoint(), event.getMethod(), event.getStatusCode(),
-                event.getLatencyMs(), event.getTimestamp() / 1000,
+                event.getLatencyMs(), new java.sql.Timestamp(event.getTimestamp()),
                 event.getUserAgent(), event.getRegion(),
                 event.isBypass() ? 1 : 0, event.isAnomaly() ? 1 : 0,
                 event.getBypassType() == null ? "" : event.getBypassType(),
                 event.getRetryCount()
             );
         } catch (Exception e) {
-            System.err.println("[ClickHouse] Insert failed: " + e.getMessage());
+            System.err.println("[ClickHouse] Insert failed:");
+            e.printStackTrace();
         }
     }
 

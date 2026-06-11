@@ -4,9 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Tracks the full lifecycle of a user session across multiple requests.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserSession implements Serializable {
 
     private String sessionId;
