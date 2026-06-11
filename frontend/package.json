@@ -1,0 +1,26 @@
+{
+  "name": "smart-traffic-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "@stomp/stompjs": "^7.0.0",
+    "sockjs-client": "^1.6.1",
+    "recharts": "^2.12.7",
+    "axios": "^1.7.2",
+    "lucide-react": "^0.396.0",
+    "date-fns": "^3.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version", "last 1 firefox version"]
+  },
+  "proxy": "http://backend:8080"
+}
